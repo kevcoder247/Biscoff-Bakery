@@ -19,8 +19,10 @@ app.get('/bakedgoods/', (req, res) => {
 });
 
 //Show route
-app.get('/backedgoods/:id', (req, res) => {
-  res.send(backedGoods[req.params.id]);
+app.get('/bakedgoods/:id', (req, res) => {
+  res.render('show.ejs', {
+    bakedGoods: bakedGoods[req.params.id]
+   })
 })
 
 // ==========================================
@@ -30,4 +32,3 @@ app.listen(PORT, () => {
   console.log(`Biscoff bakery app is listening on port ${PORT}`)
 })
 
-console.log(bakedGoods)
