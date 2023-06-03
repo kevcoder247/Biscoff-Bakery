@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BakedGoods</title>
+</head>
+<body>
+  <h1>Baked Index</h1>
+  <!-- <%%> -->
+  <!-- <p>name: <%=bakedGoods[0].name%></p> -->
+
+
+<% for(let i = 0; i < bakedGoods.length; i++){ %>
+  <a href="/bakedgood/<%= i %>">
+    <p> <%= bakedGoods[i].name %> </p>
+  </a>
+<%  } %>
+
+
+ 
+  
+</body>
+</html>
